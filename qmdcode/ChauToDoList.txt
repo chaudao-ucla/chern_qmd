@@ -1,0 +1,70 @@
+**TO-DO LIST** 
+
+
+August 16 - August 26 
+_____________________
+
+[x] Add scaling function in "tbmd.cpp" that instantaneously expands the
+	system box length and particle position. Will be used later for testing
+	of quench dynamics. 
+
+[x] Fix the issue of boxlength being miscalculated from density in local version 
+	of code.
+
+[x] Create ~5 configuration files using the equilibrium dynamics simulation. 
+		Densities of: 0.1, 0.2, 0.3, 0.4, 0.5
+		Time step: 0.01
+		NStep: 10000
+		N_Particles: 300
+		Langevin Dynamics: yes
+		kT: 0.001
+
+[x] Modify data collection to sample and store g(r) at various timesteps instead 
+	of just saving the most recent time. 
+
+[ ] Using randomized initial conditions, see how g(r) changes for a system with 
+	rho changing as a function of time. 
+
+
+August 27 - September 3
+_______________________
+
+(below are some items I suggest, partly for benchmark, partly to better understand 
+	the dynamics of our systems)
+
+[ ] Start from some initial configuration, and run the energy-conserving dynamics 
+	simulation and see whether the system reaches steady-state.
+
+	Questions: How should I best characterize the steady-state? Is this just the
+		density matrix no longer changing as a function of time? 
+	
+	Questions: For "energy-conserving dynamics simulation," I am assuming this is 
+		the simulation in which the density matrix is changing with time. Is
+		this the correct assumption?
+
+(note: the initial state is not necessarily a random state. It could also be a 
+	simple-cubic, bcc, or fcc lattice).
+
+[ ] If the system reaches a steady state, check whether this state is a thermal 
+	equilibrium state, i.e. can be described by a temperature.
+
+[ ] specifically, check whether the velocities of atom follow Maxwell distribution.
+
+[ ] Compute the g(r) in the steady-state, and see if it agrees with the g(r) in some 
+	thermal equilibrium state
+
+[ ] How to characterize the electronic sub-system ?
+
+
+—————————————— For quench study ——————————————
+
+[ ] Run the quench simulation, check the various energies (E_electron, E_pair, E_kinetic) 
+	vs time, and see whether the system reaches a steady state, and how long it takes 
+	to reach steady state.
+
+[ ] Compute and plot the time dependence of the (instantaneous) Bott index after quench.
+
+
+September 4 - September 11
+__________________________
+
